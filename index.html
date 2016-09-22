@@ -41,9 +41,10 @@ html {
   pointer-events:none;
 }
 div.downloadDiv {
-	position: relative;
+	float:right;
 	padding:5px;
-	top: 5px;
+	bottom: 5px;
+  padding-right: 15%;
   text-align: right;
   display:inline-block;
   font-size: 25px;
@@ -61,10 +62,11 @@ div.downloadDiv {
   background-color: #0052cc;
 }
 #tools {
-  clear:left;
+  position:absolute;
   display:inline-block;
 }
 a.gitlink {
+  float: bottom;
 	padding: 5px;
   border: 3px solid gray;
   font-size: 12px;
@@ -94,40 +96,42 @@ img {
 
 <canvas style="border:1px solid gray;" id="paste_canvas" width="800" height="500"></canvas>
 
+<div style="clear: both;"></div>
+
 <div id="tools">
   <span style="line-height:30px;">Cursor Type:</span>  
 
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_arrow.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_arrow')">
     <img src="cursors/aero_arrow.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_link.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_link')">
     <img src="cursors/aero_link.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_move.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_move')">
     <img src="cursors/aero_move.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_unavail.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_unavail')">
     <img src="cursors/aero_unavail.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('arrow_r.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('arrow_r')">
     <img src="cursors/arrow_r.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('beam_r.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('beam_r')">
     <img src="cursors/beam_r.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('busy.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('busy')">
     <img src="cursors/busy.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size1.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size1')">
     <img src="cursors/size1.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size2.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size2')">
     <img src="cursors/size2.png" height="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size3.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size3')">
     <img src="cursors/size3.png" width="30">
   </div>
-  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size4.png')">
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size4')">
     <img src="cursors/size4.png" height="30">
   </div>
 
@@ -137,9 +141,10 @@ img {
   <a href="#" id="downloadLink" download="screenshot-cursor.jpg">Save to file</a>
 </div>
 
-<p><a class="gitlink" href="https://github.com/ed-bit/Circular-Snake2.git">Source code on GitHub</a></p>
+<div style="clear: both;"></div>
 
-</div>
+<div><a class="gitlink" href="https://github.com/ed-bit/cursor-that-screenshot">Source code on GitHub</a></div>
+
 <script src="script.js"></script>
 </body>
 </html>
