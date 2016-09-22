@@ -1,8 +1,3 @@
-/*
-TO DO: 
-- cursor img fill
-- canvas on single line (html/css)
-*/
 // html elements
 var downloadLink = document.getElementById("downloadLink");
 var cursorButtons = document.getElementById("tools");
