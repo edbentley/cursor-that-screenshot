@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cursor that Screenshot</title>
+<style>
+body {
+	background-color: black;
+	width: 100%;
+	margin: 0px;
+	padding-top: 2%;
+	display: table-cell;
+	text-align: center;
+  color: white;
+
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 26px;
+  font-size: 1.5vmin;
+
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+html {
+    display: table;
+    margin: auto;
+}
+
+#title {
+  font-size: 30px;
+  color: gray;
+  position: absolute;
+  width:100%;
+  top: 10%;
+  pointer-events:none;
+}
+#initInstruction {
+  font-size: 15px;
+  position: absolute;
+  width:100%;
+  top: 40%;
+  pointer-events:none;
+}
+div.downloadDiv {
+	float:right;
+	padding:5px;
+	bottom: 5px;
+  padding-right: 15%;
+  text-align: right;
+  display:inline-block;
+  font-size: 25px;
+}
+#downloadLink:link, #downloadLink:visited {
+  background-color: #1a75ff;
+  border: 2px solid #002966;
+  color: white;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+#downloadLink:hover, #downloadLink:active {
+  background-color: #0052cc;
+}
+#tools {
+  position:absolute;
+  display:inline-block;
+}
+a.gitlink {
+  float: bottom;
+	padding: 5px;
+  border: 3px solid gray;
+  font-size: 12px;
+  background-color: white;
+  bottom:1%;
+}
+div.cursor_button {
+  width:30px;
+  height:30px;
+  display:inline-block;
+  vertical-align: top;
+
+  border :2px solid #000;
+  background-color: rgb(200,200,200);
+}
+img {
+  vertical-align: middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<p id="title">Cursor that Screenshot</p>
+<p id="initInstruction">Paste or drag in your screenshot here</p>
+
+<canvas style="border:1px solid gray;" id="paste_canvas" width="800" height="500"></canvas>
+
+<div style="clear: both;"></div>
+
+<div id="tools">
+  <span style="line-height:30px;">Cursor Type:</span>  
+
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_arrow')">
+    <img src="cursors/aero_arrow.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_link')">
+    <img src="cursors/aero_link.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_move')">
+    <img src="cursors/aero_move.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('aero_unavail')">
+    <img src="cursors/aero_unavail.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('arrow_r')">
+    <img src="cursors/arrow_r.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('beam_r')">
+    <img src="cursors/beam_r.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('busy')">
+    <img src="cursors/busy.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size1')">
+    <img src="cursors/size1.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size2')">
+    <img src="cursors/size2.png" height="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size3')">
+    <img src="cursors/size3.png" width="30">
+  </div>
+  <div class="cursor_button" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="button_click('size4')">
+    <img src="cursors/size4.png" height="30">
+  </div>
+
+</div>
+
+<div class="downloadDiv">
+  <a href="#" id="downloadLink" download="screenshot-cursor.jpg">Save to file</a>
+</div>
+
+<div style="clear: both;"></div>
+
+<div><a class="gitlink" href="https://github.com/ed-bit/cursor-that-screenshot">Source code on GitHub</a></div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
