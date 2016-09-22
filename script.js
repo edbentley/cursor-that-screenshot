@@ -404,17 +404,20 @@ ZoomButton.prototype.mouseMove = function(event) {
 ZoomButton.prototype.mouseUp = function(event) {
 	if (this.hovered && this.pressed) {
 		this.zoom(null, this.symbol);
+		drawCanvas();
 	}
-	this.pressed = false;
-	drawCanvas();
+	if (this.pressed) {
+		this.pressed = false;
+		drawCanvas();
+	}
 };
 ZoomButton.prototype.mouseDown = function(event) {
 	var coords = this.getMousePosition('canvas', event);
 
 	if (this.contains(coords, 0)) {
 		this.pressed = true;
+		drawCanvas();
 	}
-	drawCanvas();
 };
 
 
